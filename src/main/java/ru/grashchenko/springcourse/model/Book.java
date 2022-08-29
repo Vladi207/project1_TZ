@@ -9,7 +9,7 @@ public class Book {
 
     @NotEmpty(message = "Название книги не должно быть пустым")
     @Size(min = 2, max = 100, message = "Название книги должно быть от 2 до 100 символов длиной")
-    private String name;
+    private String title;
 
     @NotEmpty(message = "Автор не должен быть пустым")
     @Size(min = 2, max = 100, message = "Имя автора должно быть от 2 до 100 символов длиной")
@@ -22,7 +22,7 @@ public class Book {
     }
 
     public Book(String name, String author, int year) {
-        this.name = name;
+        this.title = name;
         this.author = author;
         this.year = year;
     }
@@ -35,12 +35,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getAuthor() {

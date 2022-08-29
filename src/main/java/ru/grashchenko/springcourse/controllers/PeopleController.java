@@ -31,9 +31,9 @@ public class PeopleController {
     }
 
     @GetMapping("/{id}")
-    public String show(@PathVariable int id, Model model) {
+    public String show(@PathVariable("id") int id, Model model) {
         model.addAttribute("person", personDAO.show(id));
-        model.addAttribute("book", personDAO.getBooksByPersonId(id));
+        model.addAttribute("books", personDAO.getBooksByPersonId(id));
 
         return "people/show";
     }
