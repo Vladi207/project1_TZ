@@ -1,6 +1,5 @@
 package ru.grashchenko.springcourse.controllers;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -48,7 +47,7 @@ public class BooksController {
     }
 
     @GetMapping("/new")
-    public String newBook(@ModelAttribute("book") @Valid Book book) {
+    public String newBook(@ModelAttribute("book") Book book) {
         return "books/new";
     }
 
